@@ -32,10 +32,14 @@ if road.lower() == 'left':
         door = input(
             'You arrive at the island unharmed. There is a house with 3 doors. One red, one yellow and one blue. Which colour do you choose?\n')
         if door.lower() == 'yellow':
-            print("You Win!")
+            print("You found the treasure! You Win!")
+        elif door.lower() == 'red':
+            print("It's a room full of fire. Game Over.")
+        elif door.lower() == 'blue':
+            print("You enter a room of beasts. Game Over.")
         else:
-            print("Game Over.")
-    else:
-        print("Game Over.")
+            print("You chose a door that doesn't exist. Game Over")
+    elif action.lower() == 'swim':
+        print("You got attacked by an angry trout. Game Over.")
 else:
-    print("Game Over.")
+    print("You fell into a hole. Game Over.")
